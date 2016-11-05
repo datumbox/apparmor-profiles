@@ -6,10 +6,11 @@
 /usr/bin/totem-video-thumbnailer {
   #include <abstractions/totem>
 
-  # Allow read on anything in @{HOME}. Lenient, but private-files-strict is in
+  # Allow read on almost anything in @{HOME}. Lenient, but private-files-strict is in
   # effect.
   #include <abstractions/private-files-strict>
-  owner @{HOME}/** r,
+  owner @{HOME}/[a-zA-Z0-9]*    rw,
+  owner @{HOME}/[a-zA-Z0-9]*/** rw,
 
   # Not needed by nautilus, but maybe other applications
   owner /**.[pP][nN][gG] w,
