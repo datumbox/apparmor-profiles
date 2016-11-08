@@ -26,5 +26,6 @@
   # Allow read on anything in @{HOME}. Lenient, but private-files-strict is in
   # effect.
   #include <abstractions/private-files-strict>
-  owner @{HOME}/** r,
+  owner @{HOME}/[^.]*    rw,
+  owner @{HOME}/[^.]*/** rw,
 }
