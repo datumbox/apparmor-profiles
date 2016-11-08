@@ -19,8 +19,8 @@
   # Allow read and write on almost anything in @{HOME}. Lenient, but
   # private-files-strict is in effect.
   #include <abstractions/private-files-strict>
-  owner @{HOME}/[a-zA-Z0-9]*    rw,
-  owner @{HOME}/[a-zA-Z0-9]*/** rw,
+  owner @{HOME}/[^.]*    rw,
+  owner @{HOME}/[^.]*/** rw,
 
   owner /{,var/}run/user/*/dconf/user w,
   owner /{,var/}run/user/*/at-spi2-*/   rw,
