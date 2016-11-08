@@ -9,8 +9,8 @@
   # Allow read on almost anything in @{HOME}. Lenient, but private-files-strict is in
   # effect.
   #include <abstractions/private-files-strict>
-  owner @{HOME}/[a-zA-Z0-9]*    rw,
-  owner @{HOME}/[a-zA-Z0-9]*/** rw,
+  owner @{HOME}/[^.]*    rw,
+  owner @{HOME}/[^.]*/** rw,
 
   # Not needed by nautilus, but maybe other applications
   owner /**.[pP][nN][gG] w,
