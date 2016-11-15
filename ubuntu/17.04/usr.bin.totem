@@ -6,6 +6,7 @@
 /usr/bin/totem {
   #include <abstractions/audio>
   #include <abstractions/dconf>
+  #include <abstractions/ibus>
   #include <abstractions/python>
   #include <abstractions/totem>
 
