@@ -16,7 +16,7 @@
   owner /**.[pP][nN][gG] w,
   owner /**.[jJ][pP]{,[eE]}[gG] w,
 
-  /usr/bin/totem-video-thumbnailer r,
+  /usr/bin/totem-video-thumbnailer rm,
 }
 
 /usr/bin/totem-audio-preview {
