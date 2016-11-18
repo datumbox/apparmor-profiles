@@ -35,6 +35,7 @@
   owner @{HOME}/.cache/gstreamer-[0-9]*.[0-9]*/registry.*.bin.tmp* rw,
   owner @{HOME}/.cache/thumbnails/** rw,
   owner @{HOME}/.cache/totem/** rwk,
+  owner @{HOME}/.cache/totem-* rwk,
   owner @{HOME}/.cache/tracker/db-locale.txt r,
   owner @{HOME}/.cache/tracker/meta.db{,-shm,-journal,-wal} rwk,
   owner @{HOME}/.cache/tracker/ontologies.gvdb r,
