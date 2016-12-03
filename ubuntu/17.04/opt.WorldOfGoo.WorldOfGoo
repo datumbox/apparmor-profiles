@@ -10,9 +10,9 @@
   #include <abstractions/dbus-session>
 
   # For the wrapper script
-  /bin/dash ix,
-  /bin/readlink rix,
-  /bin/uname rix,
+  /{usr/,}bin/dash ix,
+  /{usr/,}bin/readlink rix,
+  /{usr/,}bin/uname rix,
   /usr/bin/dirname rix,
 
   # The game itself
