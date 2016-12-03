@@ -56,8 +56,8 @@
   # owner @{HOME}/.{cache,config}/dconf/user rw,
   # owner /{,var/}run/user/[0-9]*/dconf/user rwk,
 
-  /bin/dash rix,
-  /bin/which rix,
+  /{usr/,}bin/dash rix,
+  /{usr/,}bin/which rix,
 
   # NB: the preferred browser and proxy settings must be configured
   # in the GNOME preferences: this profile does not allow running

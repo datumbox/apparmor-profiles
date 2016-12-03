@@ -115,7 +115,7 @@
 
     capability sys_ptrace,
 
-    /bin/dash rix,
+    /{usr/,}bin/dash rix,
     @{PROC}/ r,
     @{PROC}/*/cmdline r,
     @{PROC}/*/stat r,
@@ -149,10 +149,10 @@
 
     owner @{PROC}/[0-9]*/auxv r, # investigate
 
-    /bin/dash rix,
-    /bin/rm ix,
-    /bin/tar ix,
-    /bin/gzip ix,
+    /{usr/,}bin/dash rix,
+    /{usr/,}bin/rm ix,
+    /{usr/,}bin/tar ix,
+    /{usr/,}bin/gzip ix,
     /usr/bin/gconftool-2 ix,
     /usr/bin/evolution Px,
 

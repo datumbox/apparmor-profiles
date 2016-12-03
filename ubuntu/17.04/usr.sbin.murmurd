@@ -29,7 +29,7 @@
     #include <abstractions/python>
 
     /usr/bin/lsb_release r,
-    /bin/dash ixr,
+    /{usr/,}bin/dash ixr,
     /usr/bin/dpkg-query ixr,
 
     /usr/include/python2.[4567]/pyconfig.h r,

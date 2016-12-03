@@ -171,8 +171,8 @@ profile thunderbird /usr/lib/thunderbird/thunderbird {
   # so running with 'Ux', while not ideal, is ok because we will at least
   # benefit from glibc's secure execute.
   /usr/bin/mkfifo Uxr,  # investigate
-  /bin/ps Uxr,
-  /bin/uname Uxr,
+  /{usr/,}bin/ps Uxr,
+  /{usr/,}bin/uname Uxr,
   /usr/bin/locale Uxr,
 
   /usr/bin/gpg Cx -> gpg,

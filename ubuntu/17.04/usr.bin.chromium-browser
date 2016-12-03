@@ -139,7 +139,7 @@
   # Allow communicating with sandbox
   unix (receive, send) peer=(label=/usr/lib/chromium-browser/chromium-browser//chromium_browser_sandbox),
 
-  /bin/ps Uxr,
+  /{usr/,}bin/ps Uxr,
   /usr/lib/chromium-browser/xdg-settings Cxr -> xdgsettings,
   /usr/bin/xdg-settings Cxr -> xdgsettings,
   /usr/bin/lsb_release Cxr -> lsb_release,
@@ -153,7 +153,7 @@
     #include <abstractions/bash>
     #include <abstractions/gnome>
 
-    /bin/dash ixr,
+    /{usr/,}bin/dash ixr,
 
     /etc/ld.so.cache r,
     /usr/bin/xdg-settings r,
@@ -161,17 +161,17 @@
     /usr/share/applications/*.desktop r,
 
     # Checking default browser
-    /bin/grep ixr,
-    /bin/readlink ixr,
-    /bin/sed ixr,
-    /bin/which ixr,
+    /{usr/,}bin/grep ixr,
+    /{usr/,}bin/readlink ixr,
+    /{usr/,}bin/sed ixr,
+    /{usr/,}bin/which ixr,
     /usr/bin/basename ixr,
     /usr/bin/cut ixr,
 
     # Setting the default browser
-    /bin/mkdir ixr,
-    /bin/mv ixr,
-    /bin/touch ixr,
+    /{usr/,}bin/mkdir ixr,
+    /{usr/,}bin/mv ixr,
+    /{usr/,}bin/touch ixr,
     /usr/bin/dirname ixr,
     /usr/bin/gconftool-2 ix,
     /usr/bin/[gm]awk ixr,
@@ -184,7 +184,7 @@
     #include <abstractions/base>
     #include <abstractions/python>
     /usr/bin/lsb_release r,
-    /bin/dash ixr,
+    /{usr/,}bin/dash ixr,
     /usr/bin/dpkg-query ixr,
     /usr/include/python2.[4567]/pyconfig.h r,
     /etc/lsb-release r,
@@ -202,21 +202,21 @@
 
 profile chromium_browser_sandbox {
     # Be fanatical since it is setuid root and don't use an abstraction
-    /lib/libgcc_s.so* mr,
-    /lib/@{multiarch}/libgcc_s.so* mr,
-    /lib{,32,64}/libm-*.so* mr,
-    /lib/@{multiarch}/libm-*.so* mr,
-    /lib{,32,64}/libpthread-*.so* mr,
-    /lib/@{multiarch}/libpthread-*.so* mr,
-    /lib{,32,64}/libc-*.so* mr,
-    /lib/@{multiarch}/libc-*.so* mr,
-    /lib{,32,64}/libld-*.so* mr,
-    /lib/@{multiarch}/libld-*.so* mr,
-    /lib{,32,64}/ld-*.so* mr,
-    /lib/@{multiarch}/ld-*.so* mr,
-    /lib/tls/*/{cmov,nosegneg}/libm-*.so* mr,
-    /lib/tls/*/{cmov,nosegneg}/libpthread-*.so* mr,
-    /lib/tls/*/{cmov,nosegneg}/libc-*.so* mr,
+    /{usr/,}lib/libgcc_s.so* mr,
+    /{usr/,}lib/@{multiarch}/libgcc_s.so* mr,
+    /{usr/,}lib{,32,64}/libm-*.so* mr,
+    /{usr/,}lib/@{multiarch}/libm-*.so* mr,
+    /{usr/,}lib{,32,64}/libpthread-*.so* mr,
+    /{usr/,}lib/@{multiarch}/libpthread-*.so* mr,
+    /{usr/,}lib{,32,64}/libc-*.so* mr,
+    /{usr/,}lib/@{multiarch}/libc-*.so* mr,
+    /{usr/,}lib{,32,64}/libld-*.so* mr,
+    /{usr/,}lib/@{multiarch}/libld-*.so* mr,
+    /{usr/,}lib{,32,64}/ld-*.so* mr,
+    /{usr/,}lib/@{multiarch}/ld-*.so* mr,
+    /{usr/,}lib/tls/*/{cmov,nosegneg}/libm-*.so* mr,
+    /{usr/,}lib/tls/*/{cmov,nosegneg}/libpthread-*.so* mr,
+    /{usr/,}lib/tls/*/{cmov,nosegneg}/libc-*.so* mr,
     /usr/lib/libstdc++.so* mr,
     /usr/lib/@{multiarch}/libstdc++.so* mr,
     /etc/ld.so.cache r,

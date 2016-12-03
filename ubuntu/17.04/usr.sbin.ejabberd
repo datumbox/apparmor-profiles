@@ -29,6 +29,6 @@
   /usr/lib/erlang/bin/erl ixr,
   /usr/lib/erlang/erts-*/bin/* ixr,
 
-  /bin/dash ixr,
-  /bin/sed ixr,
+  /{usr/,}bin/dash ixr,
+  /{usr/,}bin/sed ixr,
 }

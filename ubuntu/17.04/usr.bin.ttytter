@@ -15,7 +15,7 @@
        interface="org.freedesktop.Notifications"
        member={GetServerInformation,Notify},
 
-  /bin/{da,ba,}sh ixr,
+  /{usr/,}bin/{da,ba,}sh ixr,
   /usr/bin/ttytter ixr,
   /usr/bin/curl ixr,
   /usr/bin/clear ixr,

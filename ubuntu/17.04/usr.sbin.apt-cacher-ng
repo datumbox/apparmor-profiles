@@ -21,10 +21,10 @@
   /var/log/apt-cacher-ng/* rw,
   /{,var/}run/systemd/notify w,
 
-  /bin/dash ixr,
-  /bin/ed ixr,
-  /bin/red ixr,
-  /bin/sed ixr,
+  /{usr/,}bin/dash ixr,
+  /{usr/,}bin/ed ixr,
+  /{usr/,}bin/red ixr,
+  /{usr/,}bin/sed ixr,
 
   /usr/lib/apt-cacher-ng/acngtool ixr,
 }

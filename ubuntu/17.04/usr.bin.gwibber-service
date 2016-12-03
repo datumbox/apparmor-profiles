@@ -34,12 +34,12 @@
 
   /usr/bin/ r,
   /usr/bin/python2.7 ix,
-  /bin/dash rix,
-  /bin/uname rix,
+  /{usr/,}bin/dash rix,
+  /{usr/,}bin/uname rix,
   /usr/sbin/uuidd Cxr -> uuidd,
 
-  /sbin/ldconfig rix,
-  /sbin/ldconfig.real rix,
+  /{usr/,}sbin/ldconfig rix,
+  /{usr/,}sbin/ldconfig.real rix,
 
   owner @{HOME}/.Xauthority r,
   owner @{HOME}/.config/dconf/user r,
