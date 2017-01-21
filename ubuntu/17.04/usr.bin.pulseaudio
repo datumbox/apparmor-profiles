@@ -95,6 +95,7 @@
   owner /tmp/pulse-*/pid rwk,
   owner /tmp/pulse-*/native rwk,
   owner /tmp/pulse-*/autospawn.lock rwk,
+  owner /run/user/*/pulse/autospawn.lock rwk,
 
   owner /tmp/orcexec.* mrw,
   owner /{,var/}run/user/[0-9]*/orcexec.* mrw,
