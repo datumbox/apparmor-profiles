@@ -1,0 +1,29 @@
+# vim:syntax=apparmor
+# Author: Jamie Strandboge <jamie@canonical.com>
+
+#include <tunables/global>
+
+/usr/bin/totem {
+  #include <abstractions/audio>
+  #include <abstractions/dconf>
+  #include <abstractions/python>
+  #include <abstractions/totem>
+
+  # Maybe in an abstraction?
+  /usr/include/**/pyconfig.h r,
+
+  /usr/bin/totem r,
+  /usr/bin/totem-video-thumbnailer Pix,
+  /dev/sr* r,
+
+  # Allow read and write on anything in @{HOME}. Lenient, but
+  # private-files-strict is in effect.
+  #include <abstractions/private-files-strict>
+  owner @{HOME}/** rw,
+
+  owner /{,var/}run/user/*/dconf/user w,
+  owner /{,var/}run/user/*/at-spi2-*/   rw,
+  owner /{,var/}run/user/*/at-spi2-*/** rw,
+
+  /sys/devices/pci[0-9]*/**/config r,
+}
