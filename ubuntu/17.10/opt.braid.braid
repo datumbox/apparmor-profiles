@@ -1,0 +1,20 @@
+# vim:syntax=apparmor
+# Author: James Troup <james.troup@canonical.com>
+
+#include <tunables/global>
+
+/opt/braid/braid {
+  #include <abstractions/base>
+  #include <abstractions/X>
+  #include <abstractions/audio>
+  #include <abstractions/dbus-session>
+
+  /opt/braid/** r,
+
+  owner @{HOME}/.Braid/ rw,
+  owner @{HOME}/.Braid/** rw,
+
+  /dev/input/event* r,
+
+  owner @{PROC}/[0-9]*/cmdline r,
+}
