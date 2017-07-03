@@ -18,6 +18,9 @@
   /usr/lib/@{multiarch}/libtotem-plparser[0-9]*/totem-pl-parser/* ix,
   /dev/sr* r,
 
+  # Quiet logs
+  deny /{usr/,}lib/@{multiarch}/totem/plugins/*/__pycache__/ w,
+
   # Allow read and write on almost anything in @{HOME}. Lenient, but
   # private-files-strict is in effect.
   #include <abstractions/private-files-strict>
