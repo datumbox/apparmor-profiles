@@ -29,4 +29,5 @@
   owner /{,var/}run/user/*/at-spi2-*/** rw,
 
   /sys/devices/pci[0-9]*/**/config r,
+  /sys/devices/pci[0-9]*/**/{,subsystem_}{device,vendor} r,
 }
