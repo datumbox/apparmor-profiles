@@ -197,7 +197,6 @@
     deny /tmp/.X0-lock r,
 
     /sys/devices/**/block/**/uevent r,
-    /dev/.udev/db/* r,
     /etc/udev/udev.conf r,
     @{PROC}/[0-9]*/mountinfo r,
 
