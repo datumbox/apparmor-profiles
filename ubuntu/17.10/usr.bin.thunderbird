@@ -175,6 +175,12 @@ profile thunderbird /usr/lib/thunderbird/thunderbird {
   /{usr/,}bin/uname Uxr,
   /usr/bin/locale Uxr,
 
+  # For Xubuntu to launch the browser
+  /usr/bin/exo-open ixr,
+  /usr/lib/@{multiarch}/xfce4/exo-1/exo-helper-1 ixr,
+  /etc/xdg/xdg-xubuntu/xfce4/helpers.rc r,
+  /etc/xdg/xfce4/helpers.rc r,
+
   /usr/bin/gpg Cx -> gpg,
 
   profile gpg {
