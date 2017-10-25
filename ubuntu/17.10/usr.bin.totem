@@ -10,6 +10,8 @@
   #include <abstractions/python>
   #include <abstractions/totem>
 
+  signal (send) set=("kill") peer=unconfined,
+
   # Maybe in an abstraction?
   /usr/include/**/pyconfig.h r,
 
