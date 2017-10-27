@@ -1,0 +1,26 @@
+# vim:syntax=apparmor
+# Author: James Troup <james.troup@canonical.com>
+
+#include <tunables/global>
+
+/opt/introversion/darwinia/darwinia {
+  #include <abstractions/X>
+  #include <abstractions/audio>
+  #include <abstractions/base>
+  #include <abstractions/dbus-session>
+
+  # The wrapper script
+  /{usr/,}bin/dash ix,
+  /{usr/,}bin/grep rix,
+  /usr/bin/dirname rix,
+
+  # The game itself
+  /opt/introversion/darwinia/lib/darwinia.bin.x86 rix,
+
+  /opt/introversion/darwinia/** r,
+
+  owner @{HOME}/.darwinia/ rw,
+  owner @{HOME}/.darwinia/** rw,
+
+  owner @{PROC}/[0-9]*/cmdline r,
+}

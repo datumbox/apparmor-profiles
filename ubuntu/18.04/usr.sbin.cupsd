@@ -1,0 +1,5 @@
+This profile is now included as part of the cups source package.
+To contribute to the profile or to report bugs against it, please
+see "How to file a bug" in the Ubuntu wiki:
+
+https://wiki.ubuntu.com/DebuggingApparmor

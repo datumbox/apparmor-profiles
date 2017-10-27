@@ -1,0 +1,17 @@
+# vim:syntax=apparmor
+# Last Modified: Thu Jun 30 11:40:45 2016
+# Author: Steve Beattie <steve@nxnw.org>
+
+#include <tunables/global>
+
+profile notify-reboot-required /usr/share/{update,reboot}-notifier/notify-reboot-required {
+
+  #include <abstractions/base>
+
+  /usr/bin/gettext Pix,
+
+  /usr/share/{update,reboot}-notifier/notify-reboot-required r,
+
+  /{var/,}run/reboot-required rw,
+  /{var/,}run/reboot-required.pkgs rw,
+}

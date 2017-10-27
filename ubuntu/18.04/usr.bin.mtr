@@ -1,0 +1,20 @@
+# Author: Kaan Özdinçer <kaanozdincer@gmail.com>
+# Modified-by: Steve Beattie <steve@nxnw.org>
+
+#include <tunables/global>
+
+profile mtr /usr/{s,}bin/mtr {
+  #include <abstractions/base>
+  #include <abstractions/nameservice>
+
+  capability net_raw,
+  capability setgid,
+  capability setuid,
+
+  network inet raw,
+
+  /usr/{s,}bin/mtr mr,
+  /usr/share/terminfo/** r,
+
+}
+
