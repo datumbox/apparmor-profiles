@@ -149,6 +149,9 @@
   owner /{,var/}run/user/*/dconf/user rw,
   owner @{HOME}/.config/dconf/user r,
 
+  # Magnet links
+  /usr/bin/gio ixr,
+
   profile xdgsettings {
     #include <abstractions/bash>
     #include <abstractions/gnome>
@@ -258,7 +261,7 @@ profile chromium_browser_sandbox {
     /usr/bin/chromium-browser r,
     /usr/lib/chromium-browser/chromium-browser Px,
     /usr/lib/chromium-browser/chromium-browser-sandbox r,
-    /usr/lib/chromium-browser/chrome-sandbox r,
+    /usr/lib/chromium-browser/chrome-sandbox rm,
 
     /dev/null rw,
 
